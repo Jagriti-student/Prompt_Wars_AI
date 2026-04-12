@@ -1,0 +1,62 @@
+export const strings = {
+  en: {
+    appTitle: "Smart Crowd AI",
+    signIn: "Sign In",
+    email: "Email",
+    password: "Password",
+    logIn: "Log In",
+    dummyCreds: "Any email/password will work for this prototype.",
+    sosBtn: "SOS",
+    navMap: "Map",
+    navSensors: "Sensors",
+    navSettings: "Settings",
+    whereNext: "Where to next?",
+    routeEst: "Est.",
+    startNav: "Start Navigating",
+    cancelRoute: "Cancel Route",
+    emergencyMode: "EMERGENCY EVACUATION",
+    followPath: "Follow the highlighted path avoiding crowds.",
+    cancelSos: "Cancel SOS",
+    settingsTitle: "Settings",
+    pushNotif: "Push Notifications",
+    locServices: "Location Services",
+    darkMode: "Dark Mode",
+    language: "Language",
+    logOut: "Log Out",
+    voiceHint: "Tap microphone and speak (e.g. 'nearest exit')",
+    nearestFood: "Find Nearest Food",
+    nearestWashroom: "Find Nearest Washroom"
+  },
+  hi: {
+    appTitle: "स्मार्ट क्राउड एआई",
+    signIn: "साइन इन करें",
+    email: "ईमेल",
+    password: "पासवर्ड",
+    logIn: "लॉग इन करें",
+    dummyCreds: "इस प्रोटोटाइप के लिए कोई भी ईमेल/पासवर्ड काम करेगा।",
+    sosBtn: "आपातकालीन",
+    navMap: "नक्शा",
+    navSensors: "सेंसर",
+    navSettings: "सेटिंग्स",
+    whereNext: "अगला गंतव्य?",
+    routeEst: "अनुमानित",
+    startNav: "नेविगेशन शुरू करें",
+    cancelRoute: "मार्ग रद्द करें",
+    emergencyMode: "आपातकालीन निकासी",
+    followPath: "भीड़ से बचते हुए हाइलाइट किए गए पथ का पालन करें।",
+    cancelSos: "एसओएस रद्द करें",
+    settingsTitle: "सेटिंग्स",
+    pushNotif: "पुश सूचनाएं",
+    locServices: "स्थान सेवाएँ",
+    darkMode: "डार्क मोड",
+    language: "भाषा (Language)",
+    logOut: "लॉग आउट",
+    voiceHint: "माइक्रोफ़ोन टैप करें और बोलें (उदा. 'निकटतम निकास')",
+    nearestFood: "निकटतम भोजन खोजें",
+    nearestWashroom: "निकटतम शौचालय खोजें"
+  }
+};
+
+export function getStrings(lang = 'en') {
+  return strings[lang] || strings['en'];
+}

@@ -1,0 +1,10 @@
+node_modules
+dist
+.git
+.gitignore
+app.yaml
+Dockerfile
+.dockerignore
+npm-debug.log
+README.md
+DEPLOYMENT.md
