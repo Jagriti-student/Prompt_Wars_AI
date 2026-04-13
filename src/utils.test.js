@@ -7,3 +7,6 @@ test('high density gives HIGH risk', () => {
 test('low density gives SAFE', () => {
     expect(calculateRisk(3)).toBe("SAFE");
 });
+test('boundary condition', () => {
+    expect(calculateRisk(7)).toBe("SAFE");
+});
