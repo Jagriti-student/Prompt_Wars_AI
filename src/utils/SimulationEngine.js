@@ -24,15 +24,26 @@ export class SimulationEngine {
   }
 
   start() {
-    if (this.intervalId) return;
-    this.intervalId = setInterval(() => this.tick(), 4000);
+    if (this.isRunning) return;
+    this.isRunning = true;
+    this.lastTick = performance.now();
+    this.loop();
   }
 
   stop() {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-      this.intervalId = null;
+    this.isRunning = false;
+  }
+
+  loop() {
+    if (!this.isRunning) return;
+    
+    const now = performance.now();
+    if (now - this.lastTick >= 4000) {
+      this.tick();
+      this.lastTick = now;
     }
+    
+    requestAnimationFrame(() => this.loop());
   }
 
   tick() {

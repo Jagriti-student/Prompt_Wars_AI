@@ -184,7 +184,10 @@ export function calculateConfidence(path, densities = {}, predictive = {}) {
         safetyScore -= 10;
         speedScore -= 15;
      } else {
-        if (d >= 4.0) safetyScore -= 20;
+        if (d >= 8.0) safetyScore -= 40;
+        else if (d >= 6.0) safetyScore -= 25;
+        else if (d >= 4.0) safetyScore -= 15;
+        
         if (d >= 2.0) speedScore -= 5;
      }
      
